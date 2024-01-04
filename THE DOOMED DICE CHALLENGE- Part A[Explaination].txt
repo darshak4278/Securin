@@ -1,0 +1,63 @@
+THE DOOMED DICE CHALLENGE- Part A
+
+1. Total no of Dices = 2
+   Hence each dice have 6 sides values varies from 1 to 6.
+
+   The min value = 2(2+2)
+   The max value = 12(6+6)
+ 
+   The total combinations possible, since there are 2 six-sided dice, the combination would be 6*6 (6 is the number of face values on given dice):
+   Total = 6*6 = 36
+
+2. The distribution of all possible combinations that can be obtained when rolling both Die A and Die B together is :-
+   Distribution Matrix for 2 Dice:
+   (1, 1) (1, 2) (1, 3) (1, 4) (1, 5) (1, 6) 
+   (2, 1) (2, 2) (2, 3) (2, 4) (2, 5) (2, 6) 
+   (3, 1) (3, 2) (3, 3) (3, 4) (3, 5) (3, 6) 
+   (4, 1) (4, 2) (4, 3) (4, 4) (4, 5) (4, 6) 
+   (5, 1) (5, 2) (5, 3) (5, 4) (5, 5) (5, 6) 
+   (6, 1) (6, 2) (6, 3) (6, 4) (6, 5) (6, 6) [6x6 Matrix]
+
+   Sum of Distribution Matrix for 2 Dice:
+   2 3 4 5 6 7 
+   3 4 5 6 7 8 
+   4 5 6 7 8 9 
+   5 6 7 8 9 10 
+   6 7 8 9 10 11 
+   7 8 9 10 11 12 [Total No of combinations = 26]
+
+3. From the above Sum of Distribution Matrix we will calculate all Possible Sums occurring among the number of combinations
+   Probability = (No. of favorable outcomes / Total outcomes in sample space)
+
+   Let's take an example:-
+ 
+   To find the probability of getting Sum = 2 when rolling both dice,
+   Now for getting Sum value as 2, the only possible dice outcome is
+   Dice A = 1
+   Dice B = 1
+   Sum = 1+1 = 2
+
+   P(Sum = 2) = (probability of getting value 1 while rolling Dice A)*(probability of getting value 1 while rolling Dice B)
+
+   Now, 
+   Probability of getting value 1 in Dice A = (when outcome is 1/ total outcomes possible)
+   P(1) = 1/6
+   Similarly for Dice B also the probability of getting 1 is 1/6 
+
+   Thus, P(Sum = 2) = 1/6*1/6 = 1/36 = 0.02777 = 2.77%
+
+   Probability Distribution for all possible Sums: 
+   P(Sum = 2): 0.0277778 => 2.78
+   P(Sum = 3): 0.06 => 5.56
+   P(Sum = 4): 0.08 => 8.33
+   P(Sum = 5): 0.11 => 11.11
+   P(Sum = 6): 0.14 => 13.89
+   P(Sum = 7): 0.17 => 16.67
+   P(Sum = 8): 0.14 => 13.89
+   P(Sum = 9): 0.11 => 11.11
+   P(Sum = 10): 0.08 => 8.33
+   P(Sum = 11): 0.06 => 5.56
+   P(Sum = 12): 0.03 => 2.78  
+
+The logic for the above code is iterating through all the values starting from 2 to 12, then we will find all the combinations for each sum in the distribution and then we will compute all the probability value for that sum combination before finding printing the computed probability value.
+
